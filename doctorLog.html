@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Doctor Login</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    /* Glassmorphism Card */
+    .login-container {
+        width: 380px;
+        padding: 35px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        animation: slideUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 28px;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    label {
+        font-weight: 600;
+        color: #fff;
+        display: block;
+        margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 5px;
+        outline: none;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        transition: 0.3s;
+    }
+
+    input:focus {
+        box-shadow: 0 0 8px #74ebd5;
+        transform: scale(1.02);
+    }
+
+    button {
+        width: 100%;
+        margin-top: 30px;
+        padding: 12px;
+        font-size: 16px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+        background: #45a049;
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+        0% { transform: translateY(40px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Doctor Login</h2>
+
+        <form action="DoctorLog" method="post">
+            <label>Doctor Name</label>
+            <input type="text" name="dname" required />
+
+            <label>Password</label>
+            <input type="password" name="password" required />
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

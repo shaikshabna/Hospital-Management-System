@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Doctor Registration</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    /* Glassmorphism Form */
+    .register-container {
+        width: 420px;
+        background: rgba(255, 255, 255, 0.25);
+        padding: 35px 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        animation: slideUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 25px;
+        text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.85);
+        transition: 0.3s ease;
+    }
+
+    input:focus {
+        box-shadow: 0 0 10px #74ebd5;
+        transform: scale(1.02);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 25px;
+        background: #0077ff;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #005fcc;
+        transform: scale(1.06);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .login-link {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+    }
+
+    .login-link a {
+        color: #0033ff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+        0% { transform: translateY(40px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="register-container">
+        <h1>Doctor Register</h1>
+
+        <form action="DoctorReg" method="post">
+
+            <label>Doctor Name</label>
+            <input type="text" name="dname" required />
+
+            <label>Specialization</label>
+            <input type="text" name="specialization" required />
+
+            <label>Mobile Number</label>
+            <input type="number" name="mobile" required />
+
+            <label>Password</label>
+            <input type="password" name="password" required />
+
+            <button type="submit">Register</button>
+
+            <p class="login-link">Already have an account?  
+                <a href="doctorLog.html">Login Here</a>
+            </p>
+
+        </form>
+    </div>
+
+</body>
+</html>
